@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Project\\Nand2Tetris\\Nand2Tetris\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BF517052-D405-45CE-8ACF-17500FE8F8F4}|Nand2Tetris.vcxproj|C:\\Project\\Nand2Tetris\\Nand2Tetris\\CH01_boolean.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BF517052-D405-45CE-8ACF-17500FE8F8F4}|Nand2Tetris.vcxproj|solutionrelative:CH01_boolean.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BF517052-D405-45CE-8ACF-17500FE8F8F4}|Nand2Tetris.vcxproj|C:\\Project\\Nand2Tetris\\Nand2Tetris\\Nand2Tetris.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{BF517052-D405-45CE-8ACF-17500FE8F8F4}|Nand2Tetris.vcxproj|solutionrelative:Nand2Tetris.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF517052-D405-45CE-8ACF-17500FE8F8F4}|Nand2Tetris.vcxproj|C:\\Project\\Nand2Tetris\\Nand2Tetris\\Resource.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BF517052-D405-45CE-8ACF-17500FE8F8F4}|Nand2Tetris.vcxproj|solutionrelative:Resource.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF517052-D405-45CE-8ACF-17500FE8F8F4}|Nand2Tetris.vcxproj|C:\\Project\\Nand2Tetris\\Nand2Tetris\\CH01_boolean.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BF517052-D405-45CE-8ACF-17500FE8F8F4}|Nand2Tetris.vcxproj|solutionrelative:CH01_boolean.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,17 +26,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Resource.h",
+              "DocumentMoniker": "C:\\Project\\Nand2Tetris\\Nand2Tetris\\Resource.h",
+              "RelativeDocumentMoniker": "Resource.h",
+              "ToolTip": "C:\\Project\\Nand2Tetris\\Nand2Tetris\\Resource.h",
+              "RelativeToolTip": "Resource.h",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwBoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-04T10:21:55.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CH01_boolean.cpp",
+              "DocumentMoniker": "C:\\Project\\Nand2Tetris\\Nand2Tetris\\CH01_boolean.cpp",
+              "RelativeDocumentMoniker": "CH01_boolean.cpp",
+              "ToolTip": "C:\\Project\\Nand2Tetris\\Nand2Tetris\\CH01_boolean.cpp",
+              "RelativeToolTip": "CH01_boolean.cpp",
+              "ViewState": "AgIAABsAAAAAAAAAAAAgwCgAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-04T09:19:28.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CH01_boolean.h",
+              "DocumentMoniker": "C:\\Project\\Nand2Tetris\\Nand2Tetris\\CH01_boolean.h",
+              "RelativeDocumentMoniker": "CH01_boolean.h",
+              "ToolTip": "C:\\Project\\Nand2Tetris\\Nand2Tetris\\CH01_boolean.h",
+              "RelativeToolTip": "CH01_boolean.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-04T09:17:03.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Nand2Tetris.cpp",
               "DocumentMoniker": "C:\\Project\\Nand2Tetris\\Nand2Tetris\\Nand2Tetris.cpp",
               "RelativeDocumentMoniker": "Nand2Tetris.cpp",
               "ToolTip": "C:\\Project\\Nand2Tetris\\Nand2Tetris\\Nand2Tetris.cpp",
               "RelativeToolTip": "Nand2Tetris.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAgwL0AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-06-04T09:00:42.017Z",
               "EditorCaption": ""

@@ -12,6 +12,25 @@
 #define IDI_NAND2TETRIS			107
 #define IDI_SMALL				108
 #define IDC_NAND2TETRIS			109
+
+// Coustom controls
+#define ID_BTN_INPUT_A           1001
+#define ID_BTN_INPUT_B           1002
+#define ID_BTN_AND               1003
+#define ID_BTN_OR                1004
+#define ID_BTN_NOT              1005
+#define ID_BTN_XOR              1006
+#define ID_BTN_NOR              1007
+#define ID_BTN_NAND             1008
+#define ID_BTN_MUX              1009    // MUX 연산 버튼
+#define ID_BTN_DEMUX            1010
+#define ID_STATIC_OUTPUT        1011    // 메인 출력창
+#define ID_BTN_SEL_TOGGLE       1015    // SEL 토글 버튼
+#define ID_STATIC_MUX_OUTPUT    1016    // MUX 출력 static (선택 사항)
+#define ID_STATIC_DEMUX_A       1017
+#define ID_STATIC_DEMUX_B       1018
+
+
 #define IDC_MYICON				2
 #ifndef IDC_STATIC
 #define IDC_STATIC				-1

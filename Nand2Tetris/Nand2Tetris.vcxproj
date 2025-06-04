@@ -123,12 +123,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CH01_boolean.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="Nand2Tetris.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CH01_boolean.cpp" />
     <ClCompile Include="Nand2Tetris.cpp" />
   </ItemGroup>
   <ItemGroup>

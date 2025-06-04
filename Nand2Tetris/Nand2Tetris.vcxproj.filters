@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\Public">
+      <UniqueIdentifier>{153df767-c6c1-4d2a-9e1c-d58e2a5ef5ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Private">
+      <UniqueIdentifier>{17c688e7-440c-4854-b464-156a7275473e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -27,10 +33,16 @@
     <ClInclude Include="Nand2Tetris.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="CH01_boolean.h">
+      <Filter>소스 파일\Public</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Nand2Tetris.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CH01_boolean.cpp">
+      <Filter>소스 파일\Private</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
