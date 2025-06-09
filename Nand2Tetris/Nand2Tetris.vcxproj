@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CH01_boolean.h" />
+    <ClInclude Include="CH02_Adder.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="Nand2Tetris.h" />
     <ClInclude Include="Resource.h" />
@@ -131,6 +132,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CH01_boolean.cpp" />
+    <ClCompile Include="CH02_Adder.cpp" />
     <ClCompile Include="Nand2Tetris.cpp" />
   </ItemGroup>
   <ItemGroup>

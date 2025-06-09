@@ -36,12 +36,18 @@
     <ClInclude Include="CH01_boolean.h">
       <Filter>소스 파일\Public</Filter>
     </ClInclude>
+    <ClInclude Include="CH02_Adder.h">
+      <Filter>소스 파일\Public</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Nand2Tetris.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="CH01_boolean.cpp">
+      <Filter>소스 파일\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="CH02_Adder.cpp">
       <Filter>소스 파일\Private</Filter>
     </ClCompile>
   </ItemGroup>
