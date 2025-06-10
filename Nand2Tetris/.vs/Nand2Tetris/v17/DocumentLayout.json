@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Project\\Nand2Tetris\\Nand2Tetris\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BF517052-D405-45CE-8ACF-17500FE8F8F4}|Nand2Tetris.vcxproj|C:\\Project\\Nand2Tetris\\Nand2Tetris\\CH02_Adder.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BF517052-D405-45CE-8ACF-17500FE8F8F4}|Nand2Tetris.vcxproj|solutionrelative:CH02_Adder.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{BF517052-D405-45CE-8ACF-17500FE8F8F4}|Nand2Tetris.vcxproj|C:\\Project\\Nand2Tetris\\Nand2Tetris\\ALU.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BF517052-D405-45CE-8ACF-17500FE8F8F4}|Nand2Tetris.vcxproj|solutionrelative:ALU.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF517052-D405-45CE-8ACF-17500FE8F8F4}|Nand2Tetris.vcxproj|C:\\Project\\Nand2Tetris\\Nand2Tetris\\CH01_boolean.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BF517052-D405-45CE-8ACF-17500FE8F8F4}|Nand2Tetris.vcxproj|solutionrelative:CH01_boolean.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BF517052-D405-45CE-8ACF-17500FE8F8F4}|Nand2Tetris.vcxproj|C:\\Project\\Nand2Tetris\\Nand2Tetris\\CH01_boolean.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{BF517052-D405-45CE-8ACF-17500FE8F8F4}|Nand2Tetris.vcxproj|solutionrelative:CH01_boolean.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF517052-D405-45CE-8ACF-17500FE8F8F4}|Nand2Tetris.vcxproj|C:\\Project\\Nand2Tetris\\Nand2Tetris\\CH01_boolean.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BF517052-D405-45CE-8ACF-17500FE8F8F4}|Nand2Tetris.vcxproj|solutionrelative:CH01_boolean.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{BF517052-D405-45CE-8ACF-17500FE8F8F4}|Nand2Tetris.vcxproj|C:\\Project\\Nand2Tetris\\Nand2Tetris\\ALU.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BF517052-D405-45CE-8ACF-17500FE8F8F4}|Nand2Tetris.vcxproj|solutionrelative:ALU.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF517052-D405-45CE-8ACF-17500FE8F8F4}|Nand2Tetris.vcxproj|C:\\Project\\Nand2Tetris\\Nand2Tetris\\CH02_Adder.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BF517052-D405-45CE-8ACF-17500FE8F8F4}|Nand2Tetris.vcxproj|solutionrelative:CH02_Adder.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BF517052-D405-45CE-8ACF-17500FE8F8F4}|Nand2Tetris.vcxproj|C:\\Project\\Nand2Tetris\\Nand2Tetris\\CH02_Adder.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -34,37 +42,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ALU.cpp",
+              "DocumentMoniker": "C:\\Project\\Nand2Tetris\\Nand2Tetris\\ALU.cpp",
+              "RelativeDocumentMoniker": "ALU.cpp",
+              "ToolTip": "C:\\Project\\Nand2Tetris\\Nand2Tetris\\ALU.cpp",
+              "RelativeToolTip": "ALU.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-10T08:51:30.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ALU.h",
+              "DocumentMoniker": "C:\\Project\\Nand2Tetris\\Nand2Tetris\\ALU.h",
+              "RelativeDocumentMoniker": "ALU.h",
+              "ToolTip": "C:\\Project\\Nand2Tetris\\Nand2Tetris\\ALU.h",
+              "RelativeToolTip": "ALU.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-10T08:51:10.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "CH02_Adder.cpp",
               "DocumentMoniker": "C:\\Project\\Nand2Tetris\\Nand2Tetris\\CH02_Adder.cpp",
               "RelativeDocumentMoniker": "CH02_Adder.cpp",
               "ToolTip": "C:\\Project\\Nand2Tetris\\Nand2Tetris\\CH02_Adder.cpp",
               "RelativeToolTip": "CH02_Adder.cpp",
-              "ViewState": "AgIAAAEAAAAAAAAAAAA5wAsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAAAgwEMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-06-09T10:04:54.37Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "CH02_Adder.h",
               "DocumentMoniker": "C:\\Project\\Nand2Tetris\\Nand2Tetris\\CH02_Adder.h",
               "RelativeDocumentMoniker": "CH02_Adder.h",
               "ToolTip": "C:\\Project\\Nand2Tetris\\Nand2Tetris\\CH02_Adder.h",
               "RelativeToolTip": "CH02_Adder.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-06-09T10:04:45.2Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Resource.h",
               "DocumentMoniker": "C:\\Project\\Nand2Tetris\\Nand2Tetris\\Resource.h",
               "RelativeDocumentMoniker": "Resource.h",
@@ -76,33 +110,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CH01_boolean.cpp",
               "DocumentMoniker": "C:\\Project\\Nand2Tetris\\Nand2Tetris\\CH01_boolean.cpp",
               "RelativeDocumentMoniker": "CH01_boolean.cpp",
               "ToolTip": "C:\\Project\\Nand2Tetris\\Nand2Tetris\\CH01_boolean.cpp",
               "RelativeToolTip": "CH01_boolean.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-06-04T09:19:28.085Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "CH01_boolean.h",
               "DocumentMoniker": "C:\\Project\\Nand2Tetris\\Nand2Tetris\\CH01_boolean.h",
               "RelativeDocumentMoniker": "CH01_boolean.h",
               "ToolTip": "C:\\Project\\Nand2Tetris\\Nand2Tetris\\CH01_boolean.h",
               "RelativeToolTip": "CH01_boolean.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-06-04T09:17:03.155Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Nand2Tetris.cpp",
               "DocumentMoniker": "C:\\Project\\Nand2Tetris\\Nand2Tetris\\Nand2Tetris.cpp",
               "RelativeDocumentMoniker": "Nand2Tetris.cpp",
@@ -110,8 +144,7 @@
               "RelativeToolTip": "Nand2Tetris.cpp",
               "ViewState": "AgIAALwAAAAAAAAAAAAgwNIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-04T09:00:42.017Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T09:00:42.017Z"
             }
           ]
         }
