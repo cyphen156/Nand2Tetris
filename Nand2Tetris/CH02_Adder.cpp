@@ -42,6 +42,17 @@ bool CH02_Adder::Incrementer(const bool* a, bool* sum, bool& carry, int bitSize)
 	return true;
 }
 
+/// <summary>
+/// 주어진 두 수를 더하는 함수
+/// 결과는 포인터에 의해 전달되며
+/// 출력은 오버플로우 발생 여부를 반환
+/// </summary>
+/// <param name="a">inputA</param>
+/// <param name="b">inputB</param>
+/// <param name="sum">덧셈 결과를 저장할 배열 (bitSize 크기)</param>
+/// <param name="carry">최종 캐리 아웃 비트 (bool 참조)</param>
+/// <param name="bitSize">연산에 사용할 비트 수 (최대 64)</param>
+/// <returns> isOverFlow == 오버플로우 발생 여부 </returns>
 bool CH02_Adder::Adder(const bool* a, const bool* b, bool* sum, bool& carry, int bitSize)
 {
 	// 주어진 두 수를 더하는 함수
@@ -61,9 +72,11 @@ bool CH02_Adder::Adder(const bool* a, const bool* b, bool* sum, bool& carry, int
 
 	carry = c;
 
-	if (isOverFlow)
-	{
-		return false;
-	}
-	return true;
+	bool signA = a[bitSize - 1];    // MSB of a
+	bool signB = b[bitSize - 1];    // MSB of b
+	bool signSum = sum[bitSize - 1]; // MSB of result
+
+	isOverFlow = (signA == signB) && (signSum != signA);
+
+	return isOverFlow;
 }

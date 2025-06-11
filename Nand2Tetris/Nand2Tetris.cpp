@@ -4,6 +4,7 @@
 #include "framework.h"
 #include "Nand2Tetris.h"
 #include "CH01_boolean.h"
+#include "ALU.h"
 
 #define MAX_LOADSTRING 100
 
@@ -173,6 +174,34 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         CreateWindowW(L"static", L"MUX 결과", WS_CHILD | WS_VISIBLE, 420, 60, 200, 25, hWnd, (HMENU)ID_STATIC_MUX_OUTPUT, hInst, NULL);
         CreateWindowW(L"static", L"DEMUX A", WS_CHILD | WS_VISIBLE, 420, 100, 200, 25, hWnd, (HMENU)ID_STATIC_DEMUX_A, hInst, NULL);
         CreateWindowW(L"static", L"DEMUX B", WS_CHILD | WS_VISIBLE, 420, 140, 200, 25, hWnd, (HMENU)ID_STATIC_DEMUX_B, hInst, NULL);
+        
+        // ----------------------------
+        // ALU 입력/제어 입력 라인 (하단)
+        // ----------------------------
+
+        // ALU 입력 텍스트 박스: X
+        CreateWindowW(L"static", L"X 입력:", WS_CHILD | WS_VISIBLE, 20, 360, 60, 25, hWnd, NULL, hInst, NULL);
+        CreateWindowW(L"edit", L"", WS_CHILD | WS_VISIBLE | WS_BORDER, 80, 360, 200, 25, hWnd, (HMENU)ID_EDIT_ALU_X, hInst, NULL);
+
+        // ALU 입력 텍스트 박스: Y
+        CreateWindowW(L"static", L"Y 입력:", WS_CHILD | WS_VISIBLE, 20, 400, 60, 25, hWnd, NULL, hInst, NULL);
+        CreateWindowW(L"edit", L"", WS_CHILD | WS_VISIBLE | WS_BORDER, 80, 400, 200, 25, hWnd, (HMENU)ID_EDIT_ALU_Y, hInst, NULL);
+
+        // ALU 제어 신호 버튼들 (토글 방식)
+        CreateWindowW(L"button", L"ZX", WS_CHILD | WS_VISIBLE | BS_AUTOCHECKBOX, 300, 360, 60, 25, hWnd, (HMENU)ID_ALU_ZX, hInst, NULL);
+        CreateWindowW(L"button", L"NX", WS_CHILD | WS_VISIBLE | BS_AUTOCHECKBOX, 360, 360, 60, 25, hWnd, (HMENU)ID_ALU_NX, hInst, NULL);
+        CreateWindowW(L"button", L"ZY", WS_CHILD | WS_VISIBLE | BS_AUTOCHECKBOX, 420, 360, 60, 25, hWnd, (HMENU)ID_ALU_ZY, hInst, NULL);
+        CreateWindowW(L"button", L"NY", WS_CHILD | WS_VISIBLE | BS_AUTOCHECKBOX, 480, 360, 60, 25, hWnd, (HMENU)ID_ALU_NY, hInst, NULL);
+        CreateWindowW(L"button", L"F", WS_CHILD | WS_VISIBLE | BS_AUTOCHECKBOX, 540, 360, 60, 25, hWnd, (HMENU)ID_ALU_F, hInst, NULL);
+        CreateWindowW(L"button", L"NO", WS_CHILD | WS_VISIBLE | BS_AUTOCHECKBOX, 600, 360, 60, 25, hWnd, (HMENU)ID_ALU_NO, hInst, NULL);
+
+        // ALU 실행 버튼
+        CreateWindowW(L"button", L"ALU 계산", WS_CHILD | WS_VISIBLE, 300, 400, 120, 30, hWnd, (HMENU)ID_BTN_ALU_EXEC, hInst, NULL);
+
+        // ALU 결과 출력 Static
+        CreateWindowW(L"static", L"ALU 출력:", WS_CHILD | WS_VISIBLE, 20, 440, 100, 25, hWnd, NULL, hInst, NULL);
+        CreateWindowW(L"static", L"", WS_CHILD | WS_VISIBLE | WS_BORDER, 120, 440, 400, 25, hWnd, (HMENU)ID_STATIC_ALU_OUT, hInst, NULL);
+
         break;
     case WM_COMMAND:
         {
@@ -234,6 +263,66 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                 SetWindowText(GetDlgItem(hWnd, ID_STATIC_DEMUX_A), result_demux_a ? L"DEMUX A = 1" : L"DEMUX A = 0");
                 SetWindowText(GetDlgItem(hWnd, ID_STATIC_DEMUX_B), result_demux_b ? L"DEMUX B = 1" : L"DEMUX B = 0");
                 break;
+
+            case ID_BTN_ALU_EXEC:
+            {
+                wchar_t bufX[65] = { 0 };
+                wchar_t bufY[65] = { 0 };
+
+                GetWindowText(GetDlgItem(hWnd, ID_EDIT_ALU_X), bufX, 65);
+                GetWindowText(GetDlgItem(hWnd, ID_EDIT_ALU_Y), bufY, 65);
+
+                int lenX = wcslen(bufX);
+                int lenY = wcslen(bufY);
+                int bitSize = max(lenX, lenY);
+
+                if (bitSize < 1 || bitSize > 64)
+                {
+                    MessageBox(hWnd, L"입력 비트 수는 1~64 사이여야 합니다.", L"오류", MB_OK | MB_ICONERROR);
+                    break;
+                }
+
+                bool x[64] = { false };
+                bool y[64] = { false };
+                bool out[64] = { false };
+                bool zr = false;
+                bool ng = false;
+
+                // 입력 비트 문자열을 오른쪽 정렬하여 배열로 변환 (LSB가 인덱스 0)
+                for (int i = 0; i < bitSize; ++i)
+                {
+                    if (i < lenX)
+                        x[i] = (bufX[lenX - 1 - i] == L'1');
+                    if (i < lenY)
+                        y[i] = (bufY[lenY - 1 - i] == L'1');
+                }
+
+                // 제어 비트 확인
+                bool zx = (SendMessage(GetDlgItem(hWnd, ID_ALU_ZX), BM_GETCHECK, 0, 0) == BST_CHECKED);
+                bool nx = (SendMessage(GetDlgItem(hWnd, ID_ALU_NX), BM_GETCHECK, 0, 0) == BST_CHECKED);
+                bool zy = (SendMessage(GetDlgItem(hWnd, ID_ALU_ZY), BM_GETCHECK, 0, 0) == BST_CHECKED);
+                bool ny = (SendMessage(GetDlgItem(hWnd, ID_ALU_NY), BM_GETCHECK, 0, 0) == BST_CHECKED);
+                bool f = (SendMessage(GetDlgItem(hWnd, ID_ALU_F), BM_GETCHECK, 0, 0) == BST_CHECKED);
+                bool no = (SendMessage(GetDlgItem(hWnd, ID_ALU_NO), BM_GETCHECK, 0, 0) == BST_CHECKED);
+
+                if (!ALU::Compute(x, y, zx, nx, zy, ny, f, no, out, zr, ng, bitSize))
+                {
+                    MessageBox(hWnd, L"ALU 연산 실패", L"에러", MB_OK | MB_ICONERROR);
+                    break;
+                }
+
+                // 결과를 문자열로 변환
+                wchar_t result[65] = { 0 };
+                for (int i = 0; i < bitSize; ++i)
+                {
+                    result[bitSize - 1 - i] = out[i] ? L'1' : L'0';
+                }
+
+                // 결과 출력
+                SetWindowText(GetDlgItem(hWnd, ID_STATIC_ALU_OUT), result);
+            }
+            break;
+
             case IDM_ABOUT:
                 DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
                 break;

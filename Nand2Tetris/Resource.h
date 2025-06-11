@@ -13,7 +13,7 @@
 #define IDI_SMALL				108
 #define IDC_NAND2TETRIS			109
 
-// Coustom controls
+// 비트 연산 그룹
 #define ID_BTN_INPUT_A           1001
 #define ID_BTN_INPUT_B           1002
 #define ID_BTN_AND               1003
@@ -29,6 +29,19 @@
 #define ID_STATIC_MUX_OUTPUT    1016    // MUX 출력 static (선택 사항)
 #define ID_STATIC_DEMUX_A       1017
 #define ID_STATIC_DEMUX_B       1018
+
+
+// ALU 연산 그룹
+#define ID_EDIT_ALU_X           2001
+#define ID_EDIT_ALU_Y           2002
+#define ID_ALU_ZX               2003
+#define ID_ALU_NX               2004
+#define ID_ALU_ZY               2005
+#define ID_ALU_NY               2006
+#define ID_ALU_F                2007
+#define ID_ALU_NO               2008
+#define ID_BTN_ALU_EXEC         2009
+#define ID_STATIC_ALU_OUT       2010
 
 
 #define IDC_MYICON				2
